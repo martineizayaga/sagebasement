@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c299fd7c6ab9fc3b1a3577ec40855d0b",
-    "content-hash": "96098e473b028cdb2529580554a1ae3e",
+    "hash": "95f7ba1864c9c6a525ffc99ee4ac28fe",
+    "content-hash": "fbbafe32af7598f09501d85bbfe7dace",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1814,6 +1814,57 @@
             "time": "2016-09-20 12:50:39"
         },
         {
+            "name": "twbs/bootstrap",
+            "version": "4.0.0-alpha.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "65ffb1c3b6e94440812a2e228cb8e8be512652ec"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/65ffb1c3b6e94440812a2e228cb8e8be512652ec",
+                "reference": "65ffb1c3b6e94440812a2e228cb8e8be512652ec",
+                "shasum": ""
+            },
+            "replace": {
+                "twitter/bootstrap": "self.version"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.3.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                },
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                }
+            ],
+            "description": "The most popular front-end framework for developing responsive, mobile first projects on the web.",
+            "homepage": "https://getbootstrap.com",
+            "keywords": [
+                "JS",
+                "css",
+                "framework",
+                "front-end",
+                "mobile-first",
+                "responsive",
+                "sass",
+                "web"
+            ],
+            "time": "2017-01-06 16:41:52"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v2.4.0",
             "source": {
@@ -3339,7 +3390,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "twbs/bootstrap": 15
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
