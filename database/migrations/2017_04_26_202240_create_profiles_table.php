@@ -17,6 +17,7 @@ class CreateProfilesTable extends Migration
             $table->increments('user_id');
             $table->string('nickname');
             $table->enum('group', ['gleeclub', 'chorus', 'fan']);
+            $table->integer('points');
             $table->dateTime('checked_in');
             $table->timestamps();
         });
