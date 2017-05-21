@@ -16,7 +16,7 @@ class CreateProfilesTable extends Migration
         Schema::create('profiles', function (Blueprint $table) {
             $table->increments('user_id');
             $table->string('nickname');
-            $table->enum('group', ['gleeclub', 'chorus', 'chorale', 'chamber_singers', 'fan']);
+            $table->enum('group', ['gleeclub', 'chorus', 'chorale', 'fan']);
             $table->integer('points');
             $table->integer('streak');
             $table->dateTime('checked_in');
