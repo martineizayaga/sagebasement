@@ -1,0 +1,68 @@
+.notification_link {
+	display: inline-block;
+	position: relative;
+}
+
+.notification_count {
+	background-color: #fa3e3e;
+	border-radius: 2px;
+	color: white;
+
+	padding: 1px 3px 3px 3px;
+	font-size: 10px;
+}
+
+form.btn-group + form.btn-group {
+	margin-left: -5px;
+}
+
+button.check-button {
+	border-radius: 5px 0px 0px 5px !important;
+}
+
+#friend-request-dropdown {
+	white-space: nowrap;
+	padding: 0 20px 0 20px;
+}
+
+table {
+	white-space: nowrap;
+}
+
+table#friend-request-table tr {
+	padding: 10px 0 10px 0;
+}
+
+table#friend-table tr td:nth-child(5) {
+	text-align: center;
+}
+
+table#check-in-table tr td:nth-child(7) {
+	text-align: center;
+}
+
+.glyphicon-refresh-animate {
+    -animation: spin .7s infinite linear;
+    -webkit-animation: spin2 .7s infinite linear;
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg);}
+    to { -webkit-transform: rotate(360deg);}
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg);}
+    to { transform: scale(1) rotate(360deg);}
+}
+
+.notification_link .badge {
+	background-color: #fa3e3e;
+}
+
+/*.dropdown-menu {
+	left: 50%;
+	right: auto;
+	text-align: center;
+	transform: translate(-50%, 0);
+}*/
