@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use App\Profile;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -27,7 +28,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -48,24 +49,36 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
+            'first_name' => 'required|string|alpha_dash|max:255',
+            'nickname' => 'required|string|max:255|regex:"\s*(.*?)\s*"',
+            'last_name' => 'required|string|alpha_dash|max:255',
+            'groups' => 'required',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:6|confirmed',
         ]);
     }
 
     /**
-     * Create a new user instance after a valid registration.
+     * Create a new user instance after a valid registratiunserialize(on.
      *
      * @param  array  $data
      * @return User
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
+
+        $user = User::create([
+            'first_name' => trim($data['first_name']),
+            'last_name' => trim($data['last_name']),
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+
+        $profile = new Profile;
+        $profile->nickname = '"' . trim(substr($data['nickname'], 1, -1)) . '"';
+        $profile->groups = serialize($data['groups']);
+
+        $user->profile()->save($profile);
+        return $user;
     }
 }
