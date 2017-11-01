@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('refresh')
-{{-- <meta http-equiv="refresh" content="30"> --}}
+{{-- <meta http-equiv="refresh" content="31"> --}}
 @endsection
 
 @section('notifications')
