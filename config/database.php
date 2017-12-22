@@ -40,6 +40,7 @@ return [
         ],
 
         'mysql' => [
+<<<<<<< HEAD
             'driver' => 'mysql',
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
@@ -51,6 +52,17 @@ return [
             'collation' => 'utf8mb4_general_ci',
             'prefix' => '',
             'strict' => true,
+=======
+           'driver' => 'mysql',
+            'host'     => parse_url(getenv("CLEARDB_DATABASE_URL"))["host"],
+            'database' => substr(parse_url(getenv("CLEARDB_DATABASE_URL"))["path"], 1),
+            'username' => parse_url(getenv("CLEARDB_DATABASE_URL"))["user"],
+            'password' => parse_url(getenv("CLEARDB_DATABASE_URL"))["pass"],
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+>>>>>>> refs/remotes/origin/master
             'engine' => null,
         ],
 
