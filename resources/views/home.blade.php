@@ -189,9 +189,9 @@
 
     });
 
-    function validateForm() {
-        return getDistanceFromLatLonInKm(41.035888799999995, -73.57869889999999, sessionStorage.lat, sessionStorage.lng) < 0.25;
-    }
+    // function validateForm() {
+    //     return getDistanceFromLatLonInKm(41.035888799999995, -73.57869889999999, sessionStorage.lat, sessionStorage.lng) < 0.25;
+    // }
 
     function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
         var R = 6371; // Radius of the earth in km
