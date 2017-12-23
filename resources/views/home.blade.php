@@ -1,11 +1,7 @@
 @extends('layouts.app')
 
 @section('refresh')
-<<<<<<< HEAD
 {{-- <meta http-equiv="refresh" content="20"> --}}
-=======
-{{-- <meta http-equiv="refresh" content="31"> --}}
->>>>>>> refs/remotes/origin/master
 @endsection
 
 @section('notifications')
