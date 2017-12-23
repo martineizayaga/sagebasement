@@ -60,8 +60,8 @@
 				<div class="col-lg-8">
 					<label class="checkbox-inline"><input class="mutuallyexclusive" type="checkbox" value="Glee Club" name="groups[]" {{ in_array('Glee Club', unserialize($profile->groups)) ? 'checked' : '' }}>Glee Club</label>
 	                <label class="checkbox-inline"><input class="mutuallyexclusive" type="checkbox" value="Chorus" name="groups[]" {{ in_array('Chorus', unserialize($profile->groups)) ? 'checked' : '' }}>Chorus</label>
-	                <label class="checkbox-inline"><input type="checkbox" value="Chamber Singers" name="groups[]" {{ in_array('Chamber Singers', unserialize($profile->groups)) ? 'checked' : '' }}>Chamber Singers</label>
-	                <label class="checkbox-inline"><input type="checkbox" value="Chorale" name="groups[]" {{ in_array('Chorale', unserialize($profile->groups)) ? 'checked' : '' }}>Chorale</label>
+	                {{-- <label class="checkbox-inline"><input type="checkbox" value="Chamber Singers" name="groups[]" {{ in_array('Chamber Singers', unserialize($profile->groups)) ? 'checked' : '' }}>Chamber Singers</label>
+	                <label class="checkbox-inline"><input type="checkbox" value="Chorale" name="groups[]" {{ in_array('Chorale', unserialize($profile->groups)) ? 'checked' : '' }}>Chorale</label> --}}
 				</div>
 			</div>
 			<div class="form-group">
