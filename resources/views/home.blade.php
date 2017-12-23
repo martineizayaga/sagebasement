@@ -140,7 +140,7 @@
                     </div>
                     @endif
                     @if(!Auth::guest())
-                        {!! Form::open(['action' => ['ProfileController@checkIn'], 'onsubmit' => 'return validateForm()', 'id' => 'checkInForm']) !!}
+                        {!! Form::open(['action' => ['ProfileController@checkIn']{{-- , 'onsubmit' => 'return validateForm()' --}}, 'id' => 'checkInForm']) !!}
                             {!! Form::button('Check In', ['class' => 'btn btn-success btn-block', 'id' => 'submitCheckInButton', 'type' => 'submit']) !!}
                         {!! Form::close() !!}
                     @endif
