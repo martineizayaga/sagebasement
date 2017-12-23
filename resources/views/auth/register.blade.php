@@ -59,8 +59,8 @@
                             <div class="col-md-6">
                                     <label class="checkbox-inline"><input class="mutuallyexclusive" type="checkbox" value="Glee Club" name="groups[]" {{ is_null(old('groups')) ? '' : (in_array('Glee Club', old('groups')) ? 'checked' : '' )}}>Glee Club</label>
                                     <label class="checkbox-inline"><input class="mutuallyexclusive" type="checkbox" value="Chorus" name="groups[]" {{ is_null(old('groups')) ? '' : (in_array('Chorus', old('groups')) ? 'checked' : '' )}}>Chorus</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="Chamber Singers" name="groups[]" {{ is_null(old('groups')) ? '' : (in_array('Chamber Singers', old('groups')) ? 'checked' : '' )}}>Chamber Singers</label>
-                                    <label class="checkbox-inline"><input type="checkbox" value="Chorale" name="groups[]" {{ is_null(old('groups')) ? '' : (in_array('Chorale', old('groups')) ? 'checked' : '' )}}>Chorale</label>
+                                    {{-- <label class="checkbox-inline"><input type="checkbox" value="Chamber Singers" name="groups[]" {{ is_null(old('groups')) ? '' : (in_array('Chamber Singers', old('groups')) ? 'checked' : '' )}}>Chamber Singers</label>
+                                    <label class="checkbox-inline"><input type="checkbox" value="Chorale" name="groups[]" {{ is_null(old('groups')) ? '' : (in_array('Chorale', old('groups')) ? 'checked' : '' )}}>Chorale</label> --}}
                                     @if ($errors->has('groups'))
                                         <span class="help-block">
                                             <strong>{{ $errors->first('groups') }}</strong>
