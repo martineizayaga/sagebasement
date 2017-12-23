@@ -155,7 +155,7 @@
 
 @section('script')
 {{-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAntptXxN3Y8dbyhzIWh5vj3Lsh7jHyidQ&callback=initMap" type="text/javascript"></script> --}}
-<script type="text/javascript">
+{{--<script type="text/javascript">
     var lat = '';
     var lng = '';
     var locationFound = false;
@@ -189,9 +189,9 @@
 
     });
 
-    // function validateForm() {
-    //     return getDistanceFromLatLonInKm(41.035888799999995, -73.57869889999999, sessionStorage.lat, sessionStorage.lng) < 0.25;
-    // }
+    function validateForm() {
+        return getDistanceFromLatLonInKm(41.035888799999995, -73.57869889999999, sessionStorage.lat, sessionStorage.lng) < 0.25;
+    }
 
     function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {
         var R = 6371; // Radius of the earth in km
@@ -211,7 +211,7 @@
         return deg * (Math.PI/180)
     }
         
-</script>
+</script>--}}
 @endsection
 
 
